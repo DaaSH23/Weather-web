@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" type="image/png" sizes="32x32" href="weather-logo.png">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Wreather app</title>
+
+    <!-- CSS only -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+
+    <!-- JavaScript Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa" crossorigin="anonymous"></script>
+
+    <!--css design.css-->
+    <link rel="stylesheet" href="design.css">
+
+    <!--fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto:wght@700&family=Scada:wght@700&family=Ubuntu:wght@700&family=Yanone+Kaffeesatz:wght@700&display=swap" rel="stylesheet">
+
+    <!--icons-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+
+    <!--FontAwsome-->
+    <script src="https://kit.fontawesome.com/5d97142e91.js" crossorigin="anonymous"></script>
+
+
+</head>
+<body>
+
+    
+    <nav class="navbar navbar-expand-lg navi">
+        <div class="container-fluid tagg">
+            <a class="navbar-brand" href="#">weatherApp.</a>
+            <span class="material-symbols-outlined">
+                partly_cloudy_day
+                </span>
+            <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+                <div class="navbar-nav llk">
+                    <!-- <a class="nav-link active hh" aria-current="page" href="#">Home</a> -->
+                    <a class="nav-link active" href="https://glacial-fortress-99868.herokuapp.com/">SignUp</a>
+
+                    <div class="boo">
+                        <p class="btn btn--action">
+                            <span>Connect
+                                <span class="kk">
+                                    <a href="https://www.linkedin.com/in/abhishek-oraon-developer">
+                                    <!-- <span class="kk"></span> -->
+                                    </a>
+                                </span>
+                                <span class="git">
+                                    <a href="https://github.com/DaaSH23">
+                                    </a>
+                                </span>
+                                
+                                <a href="https://daash23.github.io/abhishekO-portfolio/">
+                                    <span class="portfolio"></span>
+                                </a>
+                            </span>
+                        </p>
+                    </div>
+
+
+                    <!-- <a class="lin" href="https://www.linkedin.com/in/abhishek-oraon-developer">
+                        <img src="linkedin-logo.png" alt="">
+                    </a>
+                    <a href="https://github.com/DaaSH23">
+                        <img src="github-logo1.png" alt="">
+                    </a>
+                    <a href="reachtoabhisheko@gmail.com">
+                        <img src="gmail-logo.png" alt="">
+                    </a>
+                    <a href="https://daash23.github.io/abhishekO-portfolio/">
+                        <img src="web-logof.png" alt="">
+                    </a> -->
+                    <!-- <a class="nav-link disabled">Disabled</a> -->
+                </div>
+            </div>
+        </div>
+    </nav>
+    <!-- <div class="trademark">WeATher.</div>
+    <div class="dash">––––</div> -->
+
+    <div class="container-fluid boxesdata dsss">
+        <form action="/" method="post">
+
+            <div class="row gh">
+                <div class="col-lg-4 Cname">
+                    <label for="cityname" class="cit">City Name :    </label>
+                </div>
+                <div class="col-lg-4">
+                    <input class="inp" id="cityname" type="text" name="cityname">
+                </div>    
+                <div class="col-lg-4">
+                    <button type="submit">Explore</button>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col imm">
+                    <img src=<%= icon %>>
+                </div>
+                <div class="col tee">
+                    <%= temp1 %><a>&deg;C</a>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col depp">
+                    <%= weatherDescription1 %>
+                </div>
+            </div>
+
+            <div class="row mntt">
+                <div class="col">
+                    Min temp: <%= mintemp %>
+                </div>
+                <div class="col">
+                    Max temp: <%= maxtemp %>
+                </div>
+            </div>
+
+            <div class="row cptt">
+                <div class="col">
+                    clouds: <%= clouds %>
+                </div>
+                <div class="col">
+                    pressure: <%= pressure %>
+                </div>
+            </div>
+
+            <div class="row hvtt">
+                <div class="col">
+                    humidity: <%= humidity %>
+                </div>
+                <div class="col">
+                    visiblity: <%= vission %>
+                </div>
+            </div>
+
+            <div class="row lctt">
+                <div class="col">
+                    location: <a><%= location %></a>
+                </div>
+                <div class="col">
+                    country: <%= country %>
+                </div>
+            </div>
+
+            <div class="row dat">
+                <div class="col">
+                    <%= date %>
+                </div>
+            </div>
+
+            <!-- <p>Min temp: <%= mintemp %> | Max temp: <%= maxtemp %>| clouds: <%= clouds %></p>
+            <p>pressure: <%= pressure %> | humidity: <%= humidity %> | visiblity: <%= vission %></p>
+            <p>location: <%= location %> | country: <%= country %></p>
+            <p><%= date %></p> -->
+        </form>
+    </div>
+
+   
+</body>
+</html>
+
